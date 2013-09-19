@@ -9,4 +9,8 @@ If working on a mac:
 
 If Ubuntu:
 
-./dotfiles/ubuntu/linux-conf.sh
+./dotfiles/ubuntu/ubuntu-conf.sh
+
+If you don't have a pimped out VIM or you have errors when starting vim, run:
+
+./dotfiles/vundle-install.sh
