@@ -1,7 +1,6 @@
 #!/bin/bash
 
 #symlink mac config files
-
 ln -s $HOME/dotfiles/mac/.vim .vim
 ln -s $HOME/dotfiles/mac/.bashrc .bashrc
 ln -s $HOME/dotfiles/mac/.bash_profile .bash_profile
