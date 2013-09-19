@@ -13,4 +13,4 @@ If Ubuntu:
 
 If you don't have a pimped out VIM or you have errors when starting vim, run:
 
-./dotfiles/vundle-install.sh
+./dotfiles/vundle-install.sh then inside vim run :BundleInstall
