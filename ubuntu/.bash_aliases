@@ -1,7 +1,10 @@
 alias findcss='find . -name "*.css" | xargs grep'
+alias findsass='find . -name "*.sass" | xargs grep'
 alias findhtml='find . -name "*.html" | xargs grep'
 alias findpy='find . -path "./applications/*/migrations" -prune -o -name "*.py" | xargs grep'
 alias findjs='find . -name "*.js" | xargs grep'
+alias showtests='find . -name "*tests.py" -print'
+alias rmpyc='find . -name "*.pyc" -delete'
 
 GREEN="\[\033[0;32m\]"
 BLUE="\[\033[0;34m\]"

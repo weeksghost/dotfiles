@@ -1,1 +1,1 @@
-source /Users/emarty/.bash_profile
+source $HOME/.bash_profile
