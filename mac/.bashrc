@@ -13,6 +13,8 @@ alias phpserv='/usr/local/php5/bin/php -S 127.0.0.1:8000'
 alias showtests='find . -name "*tests.py" -print'
 alias brooklyn='cd ~/Sites/brooklyndelta'
 alias rmpyc='find . -name "*.pyc" -delete'
+alias bbox='cd ~/broadwaybox'
+alias box='workon bbox'
 
 GREEN='\[\033[0;32m\]' 
 BLUE='\[\033[0;34m\]' 
@@ -29,11 +31,8 @@ GIT_PS1_SHOWUPSTREAM="auto verbose"
 
 export PS1="\u@\h $BLUE\w$YELLOW\$(__git_ps1 ' (%s)')\n$BLUE\$$CLEAR "
 
-export WORKON_HOME=$HOME/.virtualenv
-export VIRTUALENV_USE_DISTRIBUTE="yes"
-export PIP_VIRTUALENV_BASE=$WORKON_HOME
-export PIP_RESPECT_VIRTUALENV=true
 source `which virtualenvwrapper.sh`
+export DISPLAY=:"0.0"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 

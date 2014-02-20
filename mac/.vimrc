@@ -24,6 +24,7 @@ Bundle 'tpope/vim-repeat'
 Bundle 'sjl/gundo.vim'
 Bundle 'dahu/LearnVim'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'flazz/vim-colorschemes'
 
 " colorschemes:
 Bundle 'tristen/superman'
@@ -36,7 +37,7 @@ Bundle 'rey-wright/argokai'
 "filetype plugin indent on   " required!
 syntax enable
 
-colo superman 
+colo sorcerer
 
 set showcmd                       " Display incomplete commands.
 set showmode                      " Display the mode you're in.
@@ -110,7 +111,7 @@ set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz,*/.sass-cache/*
 set wildignore+=*.php*
 set wildignore+=*.swp,*~,._*
 
-" se listchars=precedes:<,extends:>,tab:\|-,trail:· list
+set listchars=precedes:<,extends:>,tab:\|-,trail:· list
 
 set statusline=%F%r%h%w\ 
 set statusline+=%{fugitive#statusline()}\    
