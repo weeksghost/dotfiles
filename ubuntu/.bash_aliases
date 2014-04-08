@@ -6,14 +6,15 @@ alias findjs='find . -name "*.js" | xargs grep'
 alias showtests='find . -name "*tests.py" -print'
 alias rmpyc='find . -name "*.pyc" -delete'
 
-GREEN="\[\033[0;32m\]"
-BLUE="\[\033[0;34m\]"
-MAGENTA="\[\033[0;35m\]"
-CLEAR="\[\033[0m\]"
+GREEN='\[\033[0;32m\]'
+MAGENTA='\[\033[0;35m\]'
+CLEAR='\[\033[0m\]'
+YELLOW='\[\033[1;33m\]'
+PURPLE='\[\033[1;34m\]'
 
 GIT_PS1_SHOWDIRTYSTATE="yes"
 GIT_PS1_SHOWSTASHSTATE="no"
 GIT_PS1_SHOWUNTRACKEDFILES="yes"
-GIT_PS1_SHOWUPSTREAM="auto"
+GIT_PS1_SHOWUPSTREAM="auto verbose"
 
-export PS1="\u@\h $GREEN\w$MAGENTA\$(__git_ps1 ' (%s)')\n$BLUE\$$CLEAR "
+export PS1="\[\033[01;32m\]\u@mac $PURPLE\w$YELLOW\$(__git_ps1 ' (%s)')\[\033[00m\]\n\$ "
