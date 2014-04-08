@@ -16,20 +16,18 @@ alias rmpyc='find . -name "*.pyc" -delete'
 alias bbox='cd ~/broadwaybox'
 alias box='workon bbox'
 
-GREEN='\[\033[0;32m\]' 
-BLUE='\[\033[0;34m\]' 
-MAGENTA='\[\033[0;35m\]' 
+GREEN='\[\033[0;32m\]'
+MAGENTA='\[\033[0;35m\]'
 CLEAR='\[\033[0m\]'
 YELLOW='\[\033[1;33m\]'
-RED='\[\033[0;31m\]'
-BLUE='\[\033[0;34m\]'
+PURPLE='\[\033[1;34m\]'
 
-GIT_PS1_SHOWDIRTYSTATE="yes" 
-GIT_PS1_SHOWSTASHSTATE="no" 
-GIT_PS1_SHOWUNTRACKEDFILES="yes" 
-GIT_PS1_SHOWUPSTREAM="auto verbose" 
+GIT_PS1_SHOWDIRTYSTATE="yes"
+GIT_PS1_SHOWSTASHSTATE="no"
+GIT_PS1_SHOWUNTRACKEDFILES="yes"
+GIT_PS1_SHOWUPSTREAM="auto verbose"
 
-export PS1="\u@\h $BLUE\w$YELLOW\$(__git_ps1 ' (%s)')\n$BLUE\$$CLEAR "
+export PS1="\[\033[01;32m\]\u@mac $PURPLE\w$YELLOW\$(__git_ps1 ' (%s)')\[\033[00m\]\n\$ "
 
 source `which virtualenvwrapper.sh`
 export DISPLAY=:"0.0"
