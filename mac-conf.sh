@@ -7,3 +7,4 @@ ln -s $HOME/dotfiles/mac/.bash_profile .bash_profile
 ln -s $HOME/dotfiles/mac/.vimrc .vimrc
 ln -s $HOME/dotfiles/mac/.vimrc.local .vimrc.local
 ln -s $HOME/dotfiles/mac/.bash_rc .bash_rc
+ln -s $HOME/dotfiles/mac/.gitconfig .gitconfig
