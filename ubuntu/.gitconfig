@@ -1,0 +1,47 @@
+[User]
+  name =
+  email =
+
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+
+[rerere]
+  enabled = False
+
+[color]
+  ui = auto
+
+[color "branch"]
+  current = green reverse
+  local = green
+  remote = red
+
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+
+[color "status"]
+  added = green
+  changed = red
+  untracked = cyan
+
+[core]
+  editor = /usr/local/bin/vim
+
+[alias]
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  lg = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=short
+  st = status
+  co = checkout
+  tree = log --graph --pretty=oneline --decorate
+  ri = rebase -i
+  aa = add -A
+  continue = rebase --continue
+  abort = rebase --abort
+  skip = rebase --skip
+  db = branch -D
+  td = log --tags --simplify-by-decoration --pretty=format:%d%ci
