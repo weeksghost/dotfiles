@@ -1,1 +1,0 @@
-/Users/emarty/dotfiles/mac/.bashrc
