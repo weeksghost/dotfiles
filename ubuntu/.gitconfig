@@ -45,3 +45,4 @@
   skip = rebase --skip
   db = branch -D
   td = log --tags --simplify-by-decoration --pretty=format:%d%ci
+  ltags = git tag | sort -g | tail -n 1
