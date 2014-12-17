@@ -15,6 +15,7 @@ alias brooklyn='cd ~/Sites/brooklyndelta'
 alias rmpyc='find . -name "*.pyc" -delete'
 alias bbox='cd ~/broadwaybox'
 alias box='workon bbox'
+alias ls='ls -G'
 
 GREEN='\[\033[0;32m\]'
 MAGENTA='\[\033[0;35m\]'
@@ -30,6 +31,7 @@ GIT_PS1_SHOWUPSTREAM="auto verbose"
 export PS1="\[\033[01;32m\]\u@mac $PURPLE\w$YELLOW\$(__git_ps1 ' (%s)')\[\033[00m\]\n\$ "
 
 source `which virtualenvwrapper.sh`
+source /usr/local/bin/wp-completion.bash
 export DISPLAY=:"0.0"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

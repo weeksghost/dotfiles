@@ -25,6 +25,7 @@ Bundle 'sjl/gundo.vim'
 Bundle 'dahu/LearnVim'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'flazz/vim-colorschemes'
+Bundle 'altercation/solarized'
 
 " colorschemes:
 Bundle 'tristen/superman'
@@ -35,9 +36,11 @@ Bundle 'rey-wright/argokai'
 
 " let g:ackprg = 'ag --nogroup --nocolor --column' 
 "filetype plugin indent on   " required!
-syntax enable
 
-colo sorcerer
+syntax enable
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
 
 set showcmd                       " Display incomplete commands.
 set showmode                      " Display the mode you're in.
@@ -64,8 +67,8 @@ set wrap                          " Turn on line wrapping.
 " set scrolloff=3                   " Show 3 lines of context around the cursor.
 
 set shiftwidth=4                 " 
-set tabstop=4                     " Tabs and spaces.
-set softtabstop=4
+set tabstop=2                     " Tabs and spaces.
+set softtabstop=2
 set expandtab                     " 
 
 set nrformats=                    " This will cause Vim to treat all numerals
@@ -89,6 +92,21 @@ set autoread                      " Automatically re-read files changed outside 
 
 set notimeout                     " Don't time out partially entered mapped key sequences.
 set ttimeout                      " But do time out key codes.
+
+set guifont=Inconsolata\ for\ Powerline:h15
+"let g:Powerline_symbols = 'fancy'
+set encoding=utf-8
+set t_Co=256
+set fillchars+=stl:\ ,stlnc:\
+set term=xterm-256color
+set termencoding=utf-8
+
+if has("gui_running")
+   let s:uname = system("uname")
+   if s:uname == "Darwin\n"
+      set guifont=Inconsolata\ for\ Powerline:h15
+   endif
+endif
 
 "set autoindent
 "set copyindent
