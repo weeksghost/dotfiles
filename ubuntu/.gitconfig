@@ -30,7 +30,7 @@
   untracked = cyan
 
 [core]
-  editor = /usr/local/bin/vim
+  editor = /usr/bin/vim
 
 [alias]
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
@@ -45,3 +45,4 @@
   skip = rebase --skip
   db = branch -D
   td = log --tags --simplify-by-decoration --pretty=format:%d%ci
+  ltags = git tag | sort -g | tail -n 1

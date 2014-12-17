@@ -1,1 +1,0 @@
-/home/emarty/dotfiles/ubuntu/.bash_aliases

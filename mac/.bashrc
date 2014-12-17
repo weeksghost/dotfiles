@@ -33,6 +33,7 @@ export PS1="\[\033[01;32m\]\u@mac $PURPLE\w$YELLOW\$(__git_ps1 ' (%s)')\[\033[00
 source `which virtualenvwrapper.sh`
 source /usr/local/bin/wp-completion.bash
 export DISPLAY=:"0.0"
+export TERM=xterm-256color
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
