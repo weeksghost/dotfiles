@@ -13,8 +13,6 @@ alias phpserv='/usr/local/php5/bin/php -S 127.0.0.1:8000'
 alias showtests='find . -name "*tests.py" -print'
 alias brooklyn='cd ~/Sites/brooklyndelta'
 alias rmpyc='find . -name "*.pyc" -delete'
-alias bbox='cd ~/broadwaybox'
-alias box='workon bbox'
 alias ls='ls -G'
 
 GREEN='\[\033[0;32m\]'
