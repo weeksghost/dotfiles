@@ -1,5 +1,6 @@
 set nocp
-filetype off
+filetype on            " enables filetype detection
+filetype plugin on     " enables filetype specific plugins
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
@@ -25,7 +26,11 @@ Bundle 'sjl/gundo.vim'
 Bundle 'dahu/LearnVim'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'flazz/vim-colorschemes'
+Bundle 'powerline/fonts'
+"Bundle 'powerline/powerline'
 Bundle 'altercation/solarized'
+Bundle 'davidhalter/jedi-vim'
+Bundle 'kevinw/pyflakes-vim'
 
 " colorschemes:
 Bundle 'tristen/superman'
@@ -36,11 +41,10 @@ Bundle 'rey-wright/argokai'
 
 " let g:ackprg = 'ag --nogroup --nocolor --column' 
 "filetype plugin indent on   " required!
-
 syntax enable
 set background=dark
 let g:solarized_termcolors=256
-colorscheme solarized
+colo solarized
 
 set showcmd                       " Display incomplete commands.
 set showmode                      " Display the mode you're in.
@@ -67,8 +71,8 @@ set wrap                          " Turn on line wrapping.
 " set scrolloff=3                   " Show 3 lines of context around the cursor.
 
 set shiftwidth=4                 " 
-set tabstop=2                     " Tabs and spaces.
-set softtabstop=2
+set tabstop=4                     " Tabs and spaces.
+set softtabstop=4
 set expandtab                     " 
 
 set nrformats=                    " This will cause Vim to treat all numerals
@@ -92,21 +96,6 @@ set autoread                      " Automatically re-read files changed outside 
 
 set notimeout                     " Don't time out partially entered mapped key sequences.
 set ttimeout                      " But do time out key codes.
-
-set guifont=Inconsolata\ for\ Powerline:h15
-"let g:Powerline_symbols = 'fancy'
-set encoding=utf-8
-set t_Co=256
-set fillchars+=stl:\ ,stlnc:\
-set term=xterm-256color
-set termencoding=utf-8
-
-if has("gui_running")
-   let s:uname = system("uname")
-   if s:uname == "Darwin\n"
-      set guifont=Inconsolata\ for\ Powerline:h15
-   endif
-endif
 
 "set autoindent
 "set copyindent
@@ -138,6 +127,24 @@ set statusline+=[%{strlen(&fenc)?&fenc:&enc}]
 set statusline +=%2*%m%*                "modified flag
 
 " let g:Powerline_symbols = 'fancy'
+
+set guifont=Inconsolata\ for\ Powerline:h22
+"let g:Powerline_symbols = 'fancy'
+set encoding=utf-8
+set t_Co=256
+set fillchars+=stl:\ ,stlnc:\
+set term=xterm-256color
+set termencoding=utf-8
+
+set lines=40
+set columns=100
+
+if has("gui_running")
+   let s:uname = system("uname")
+   if s:uname == "Darwin\n"
+      set guifont=Inconsolata\ for\ Powerline:h22
+   endif
+endif
 
 let g:SuperTabCrMapping = 0
 let delimitMate_expand_cr = 1
