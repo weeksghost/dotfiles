@@ -9,9 +9,6 @@ alias findsass='find . -name "*.sass" | xargs grep'
 alias findhtml='find . -name "*.html" | xargs grep'
 alias findpy='find . -path "./applications/*/migrations" -prune -o -name "*.py" | xargs grep'
 alias findjs='find . -name "*.js" | xargs grep'
-alias phpserv='/usr/local/php5/bin/php -S 127.0.0.1:8000'
-alias showtests='find . -name "*tests.py" -print'
-alias brooklyn='cd ~/Sites/brooklyndelta'
 alias rmpyc='find . -name "*.pyc" -delete'
 alias ls='ls -G'
 
@@ -29,10 +26,7 @@ GIT_PS1_SHOWUPSTREAM="auto verbose"
 export PS1="\[\033[01;32m\]\u@mac $PURPLE\w$YELLOW\$(__git_ps1 ' (%s)')\[\033[00m\]\n\$ "
 
 source `which virtualenvwrapper.sh`
-source /usr/local/bin/wp-completion.bash
 export DISPLAY=:"0.0"
 export TERM=xterm-256color
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+source /usr/local/Cellar/git/2.4.5/etc/bash_completion.d/git-prompt.sh
+source /usr/local/Cellar/git/2.4.5/etc/bash_completion.d/git-completion.bash
