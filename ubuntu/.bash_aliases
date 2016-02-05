@@ -20,3 +20,4 @@ source `which virtualenvwrapper.sh`
 
 export PS1="\[\033[01;32m\]\u@ubuntu $PURPLE\w$YELLOW\$(__git_ps1 ' (%s)')\[\033[00m\]\n\$ "
 export TERM=xterm-256color
+export DISPLAY=:99
