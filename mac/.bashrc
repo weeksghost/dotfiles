@@ -4,6 +4,11 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
 fi
 
+if [ -f "$(brew --prefix bash-git-prompt)/share/gitprompt.sh" ]; then
+  GIT_PROMPT_THEME=Default
+  source "$(brew --prefix bash-git-prompt)/share/gitprompt.sh"
+fi
+
 alias findcss='find . -name "*.css" | xargs grep'
 alias findsass='find . -name "*.sass" | xargs grep'
 alias findhtml='find . -name "*.html" | xargs grep'
@@ -28,5 +33,3 @@ export PS1="\[\033[01;32m\]\u@mac $PURPLE\w$YELLOW\$(__git_ps1 ' (%s)')\[\033[00
 source `which virtualenvwrapper.sh`
 export DISPLAY=:"0.0"
 export TERM=xterm-256color
-source /usr/local/Cellar/git/2.4.5/etc/bash_completion.d/git-prompt.sh
-source /usr/local/Cellar/git/2.4.5/etc/bash_completion.d/git-completion.bash
