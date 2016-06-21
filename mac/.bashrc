@@ -1,4 +1,4 @@
-export PATH="/usr/local/bin:$PATH:/usr/local/mysql/bin:/usr/local/sbin"
+export PATH="/usr/local/bin:$PATH:/usr/local/mysql/bin:/usr/local/sbin:/usr/local/bin/python"
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
@@ -16,6 +16,7 @@ alias findpy='find . -path "./applications/*/migrations" -prune -o -name "*.py" 
 alias findjs='find . -name "*.js" | xargs grep'
 alias rmpyc='find . -name "*.pyc" -delete'
 alias ls='ls -G'
+alias nysitty='cd nysitty && workon nysitty'
 
 GREEN='\[\033[0;32m\]'
 MAGENTA='\[\033[0;35m\]'

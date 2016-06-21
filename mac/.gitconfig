@@ -1,6 +1,6 @@
 [User]
-  name =
-  email =
+	name = Erik Marty
+	email = erik.marty@mediahive.com
 
 [color]
   diff = auto
@@ -37,7 +37,7 @@
   lg = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=short
   st = status
   co = checkout
-  tree = log --graph --pretty=oneline --decorate
+  tree = log --graph --abbrev-commit --pretty=oneline --decorate
   ri = rebase -i
   aa = add -A
   continue = rebase --continue
