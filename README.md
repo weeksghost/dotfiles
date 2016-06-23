@@ -9,7 +9,7 @@ Before cloning the repo, in order to use these features fully you should do the 
     cd /usr/local/bin
     sudo ln -s /usr/local/Cellar/macvim/<MVIM_VERSION>/bin/mvim vim
     
-##Make sure to `cd` to the root of your user account
+###Make sure to `cd` to the root of your user account
 
 First clone this repo to the root of your user account:
 
