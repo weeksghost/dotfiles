@@ -41,9 +41,9 @@ Now open VIM using the "vim" command and type:
     
 ##Here are links to the software we are using here:
 
-http://brew.sh/
-https://github.com/tpope/vim-pathogen
-https://github.com/VundleVim/Vundle.vim
+    http://brew.sh/
+    https://github.com/tpope/vim-pathogen
+    https://github.com/VundleVim/Vundle.vim
 
 
 
