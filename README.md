@@ -1,20 +1,22 @@
 dotfiles
 =======
 
-First clone this repo to the root of your user account:
-
-    /Users/<name>
-    /home/<name>
-
-After cloning repo In order to use these features fully you should do the following:
+Before cloning the repo, in order to use these features fully you should do the following:
 
     brew install macvim
     brew install bash-completion
     brew install bash-git-prompt
     cd /usr/local/bin
-    sudo ln -s /usr/local/Cellar/macvim/MVIM_VERSION/bin/mvim vim
+    sudo ln -s /usr/local/Cellar/macvim/<MVIM_VERSION>/bin/mvim vim
+    
+##Make sure to `cd` to the root of your user account
 
-Next link some core files:
+First clone this repo to the root of your user account:
+
+    /Users/<name> --> MAC
+    /home/<name> --> Linux(Ubuntu)
+
+Next link the core files:
 
 If working on a mac:
 
@@ -36,6 +38,12 @@ Finally run the following (while still at the root of home folder)
 Now open VIM using the "vim" command and type:
 
     :BundleInstall
+    
+##Here are links to the software we are using here:
+
+http://brew.sh/
+https://github.com/tpope/vim-pathogen
+https://github.com/VundleVim/Vundle.vim
 
 
 
