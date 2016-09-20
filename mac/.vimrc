@@ -1,12 +1,14 @@
 set nocp
+execute pathogen#infect()
 filetype on            " enables filetype detection
 filetype plugin on     " enables filetype specific plugins
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
+
 Bundle 'gmarik/vundle'
 
 " My Bundles here:
-"Bundle "vim-scripts/UltiSnips"
+"Bundle 'vim-scripts/UltiSnips'
 "Bundle 'rey-wright/ultisnips-snippets.git'
 Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
@@ -30,7 +32,10 @@ Bundle 'powerline/fonts'
 "Bundle 'powerline/powerline'
 Bundle 'altercation/solarized'
 Bundle 'davidhalter/jedi-vim'
-Bundle 'kevinw/pyflakes-vim'
+Bundle 'scrooloose/syntastic'
+Bundle 'Townk/vim-autoclose'
+Bundle 'vim-scripts/closetag.vim'
+Bundle 'mattn/emmet-vim'
 
 " colorschemes:
 Bundle 'tristen/superman'
@@ -45,6 +50,8 @@ syntax enable
 set background=dark
 let g:solarized_termcolors=256
 colo solarized
+
+let g:python_host_prog = '/usr/local/bin/python'
 
 set showcmd                       " Display incomplete commands.
 set showmode                      " Display the mode you're in.
@@ -100,7 +107,7 @@ set ttimeout                      " But do time out key codes.
 "set autoindent
 "set copyindent
 "set smartindent
-set showbreak=↪\  
+set showbreak=↪\
 
 " The active split is now on the right / bottom for
 " vertical / horizontal splits respectively. To 
@@ -120,29 +127,34 @@ set wildignore+=*.swp,*~,._*
 
 set listchars=precedes:<,extends:>,tab:\|-,trail:· list
 
-set statusline=%F%r%h%w\ 
-set statusline+=%{fugitive#statusline()}\    
+set statusline=%F%r%h%w\
+set statusline+=%{fugitive#statusline()}\
 set statusline +=%y%*                "file type
 set statusline+=[%{strlen(&fenc)?&fenc:&enc}]
 set statusline +=%2*%m%*                "modified flag
 
-" let g:Powerline_symbols = 'fancy'
-
-set guifont=Inconsolata\ for\ Powerline:h22
+set guifont=Inconsolata\ for\ Powerline:h16
 "let g:Powerline_symbols = 'fancy'
 set encoding=utf-8
 set t_Co=256
 set fillchars+=stl:\ ,stlnc:\
-set term=xterm-256color
+"set term=xterm-256color
 set termencoding=utf-8
 
-set lines=40
-set columns=100
+"Syntastic
+set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
 
 if has("gui_running")
    let s:uname = system("uname")
    if s:uname == "Darwin\n"
-      set guifont=Inconsolata\ for\ Powerline:h22
+      set guifont=Inconsolata\ for\ Powerline:h16
    endif
 endif
 
