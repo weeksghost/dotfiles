@@ -33,6 +33,9 @@ Bundle 'powerline/fonts'
 Bundle 'altercation/solarized'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'scrooloose/syntastic'
+Bundle 'Townk/vim-autoclose'
+Bundle 'vim-scripts/closetag.vim'
+Bundle 'mattn/emmet-vim'
 
 " colorschemes:
 Bundle 'tristen/superman'
