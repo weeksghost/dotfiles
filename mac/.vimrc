@@ -44,7 +44,7 @@ Bundle 'noahfrederick/Hemisu'
 Bundle 'tomasr/molokai'
 Bundle 'rey-wright/argokai'
 
-" let g:ackprg = 'ag --nogroup --nocolor --column' 
+" let g:ackprg = 'ag --nogroup --nocolor --column'
 "filetype plugin indent on   " required!
 syntax enable
 set background=dark
@@ -77,10 +77,10 @@ set hlsearch                      " Highlight matches.
 set wrap                          " Turn on line wrapping.
 " set scrolloff=3                   " Show 3 lines of context around the cursor.
 
-set shiftwidth=4                 " 
+set shiftwidth=4                 "
 set tabstop=4                     " Tabs and spaces.
 set softtabstop=4
-set expandtab                     " 
+set expandtab                     "
 
 set nrformats=                    " This will cause Vim to treat all numerals
                                   " As decimal, regarless whether they are
@@ -110,7 +110,7 @@ set ttimeout                      " But do time out key codes.
 set showbreak=↪\
 
 " The active split is now on the right / bottom for
-" vertical / horizontal splits respectively. To 
+" vertical / horizontal splits respectively. To
 " get native functionality, use the maps provited
 set splitright
 set splitbelow
@@ -198,8 +198,8 @@ endfunc
 nn <Leader>n :NERDTreeToggle<CR>
 
 " Ack
-nn <Leader>f :Ack! 
- 
+nn <Leader>f :Ack!
+
 " move through virtual lines, rows as determined by terminal even if wrapped
 " nn j gj
 " nn k gk
@@ -214,23 +214,23 @@ nn <silent> <leader><space> :noh<CR>
 nn Y y$
 
 " Map colon to semicolon, map semicolon to colon
-nn ; :
-nn : ;
-vn ; :
-vn : ;
-" 
+"nn ; :
+"nn : ;
+"vn ; :
+"vn : ;
+"
 " "finese these timeouts later
 " " :set timeout timeoutlen=500 ttimeoutlen=100
-" 
+"
 " " Map escape to jk
 " :imap jk <Esc><Esc>
 " :inoremap jk <esc><esc>
-" 
+"
 " " When joining lines, vim adds a space.... I end up removing  that space far too often, so let's override the default" functionality of J
 " " Also: no gj does not also accomplish this, because if both the lines are indented, the indentation will be carried over
 "nn jj
 "nn J Jx
-" 
+"
 command! W :execute ':silent w !sudo tee % > /dev/null' | :edit!
-" 
+"
 source ~/.vimrc.local
