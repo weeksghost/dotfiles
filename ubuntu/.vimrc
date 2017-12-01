@@ -23,7 +23,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 Bundle 'sjl/gundo.vim'
 Bundle 'dahu/LearnVim'
-"Bundle 'Valloric/YouCompleteMe'
+Bundle 'Valloric/YouCompleteMe'
 
 " colorschemes:
 Bundle 'tristen/superman'
