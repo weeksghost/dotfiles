@@ -16,7 +16,6 @@ alias findpy='find . -path "./applications/*/migrations" -prune -o -name "*.py" 
 alias findjs='find . -name "*.js" | xargs grep'
 alias rmpyc='find . -name "*.pyc" -delete'
 alias ls='ls -G'
-alias nysitty='cd nysitty && workon nysitty'
 
 GREEN='\[\033[0;32m\]'
 MAGENTA='\[\033[0;35m\]'
@@ -34,3 +33,13 @@ export PS1="\[\033[01;32m\]\u@mac $PURPLE\w$YELLOW\$(__git_ps1 ' (%s)')\[\033[00
 source `which virtualenvwrapper.sh`
 export DISPLAY=:"0.0"
 export TERM=xterm-256color
+
+export PATH=$PATH:$HOME/.npm-global/bin
+
+export FABRIC_VERSION=hlfv11
+
+eval "$(pipenv --completion)"
+
+export LDFLAGS="-L/usr/local/opt/openssl/lib"
+export CPPFLAGS="-I/usr/local/opt/openssl/include"
+export PYCURL_SSL_LIBRARY=openssl

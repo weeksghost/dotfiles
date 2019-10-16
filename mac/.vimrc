@@ -8,18 +8,11 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " My Bundles here:
-"Bundle 'vim-scripts/UltiSnips'
-"Bundle 'rey-wright/ultisnips-snippets.git'
 Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
-" Bundle 'ervandew/supertab'
 Bundle 'mileszs/ack.vim'
-"Bundle 'vim-scripts/matchit.zip'
 Bundle 'tomtom/tcomment_vim'
-"Bundle 'Valloric/MatchTagAlways'
-"Bundle 'Raimondi/delimitMate'
-"Bundle 'skammer/vim-css-color'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-surround'
@@ -29,29 +22,32 @@ Bundle 'dahu/LearnVim'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'powerline/fonts'
-"Bundle 'powerline/powerline'
 Bundle 'altercation/solarized'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'Townk/vim-autoclose'
 Bundle 'vim-scripts/closetag.vim'
 Bundle 'mattn/emmet-vim'
+Bundle 'tomasiser/vim-code-dark'
+Bundle 'powerline/powerline-fonts'
 
 " colorschemes:
 Bundle 'tristen/superman'
 Bundle 'w0ng/vim-hybrid'
 Bundle 'noahfrederick/Hemisu'
 Bundle 'tomasr/molokai'
-Bundle 'rey-wright/argokai'
 
 " let g:ackprg = 'ag --nogroup --nocolor --column'
-"filetype plugin indent on   " required!
+" filetype plugin indent on   " required!
 syntax enable
-set background=dark
-let g:solarized_termcolors=256
-colo solarized
+" set background=dark
+" let g:solarized_termcolors=256
+" colo solarized
+colo codedark
 
 let g:python_host_prog = '/usr/local/bin/python'
+
+set guifont=Inconsolata\ for\ Powerline:h16
 
 set showcmd                       " Display incomplete commands.
 set showmode                      " Display the mode you're in.
@@ -118,7 +114,6 @@ ca vsl lefta vs
 ca spt abo sp
 " ca qall <silent> bufdo update|bdelete
 
-
 " I do not want to see any of this stuff when I'm searching for files
 set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem
 set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz,*/.sass-cache/*
@@ -133,29 +128,42 @@ set statusline +=%y%*                "file type
 set statusline+=[%{strlen(&fenc)?&fenc:&enc}]
 set statusline +=%2*%m%*                "modified flag
 
-set guifont=Inconsolata\ for\ Powerline:h16
-"let g:Powerline_symbols = 'fancy'
+" let g:Powerline_symbols = 'fancy'
 set encoding=utf-8
 set t_Co=256
 set fillchars+=stl:\ ,stlnc:\
-"set term=xterm-256color
+" set term=xterm-256color
 set termencoding=utf-8
 
-"Syntastic
+" Syntastic
 set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
 
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
-"let g:syntastic_check_on_wq = 0
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+
+" if has("gui_running")
+"    let s:uname = system("uname")
+"    if s:uname == "Darwin\n"
+"       set guifont=Inconsolata\ for\ Powerline:h16
+"    endif
+" endif
 
 if has("gui_running")
-   let s:uname = system("uname")
-   if s:uname == "Darwin\n"
-      set guifont=Inconsolata\ for\ Powerline:h16
-   endif
+  " GUI is running or is about to start.
+  " Maximize gvim window.
+  set lines=999 columns=999
+else
+  " This is console Vim.
+  if exists("+lines")
+    set lines=50
+  endif
+  if exists("+columns")
+    set columns=100
+  endif
 endif
 
 let g:SuperTabCrMapping = 0
