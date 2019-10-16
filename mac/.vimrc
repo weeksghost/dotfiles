@@ -30,6 +30,7 @@ Bundle 'vim-scripts/closetag.vim'
 Bundle 'mattn/emmet-vim'
 Bundle 'tomasiser/vim-code-dark'
 Bundle 'powerline/powerline-fonts'
+Bundle 'vim-python/python-syntax'
 
 " colorschemes:
 Bundle 'tristen/superman'
@@ -37,18 +38,22 @@ Bundle 'w0ng/vim-hybrid'
 Bundle 'noahfrederick/Hemisu'
 Bundle 'tomasr/molokai'
 
+syntax enable
+
 " let g:ackprg = 'ag --nogroup --nocolor --column'
 " filetype plugin indent on   " required!
-syntax enable
-" set background=dark
 " let g:solarized_termcolors=256
+"
 " colo solarized
+" set background=dark
 colo codedark
 
 let g:python_host_prog = '/usr/local/bin/python'
+let g:python_highlight_all = 1
 
-set guifont=Inconsolata\ for\ Powerline:h16
+set guifont=Inconsolata\ for\ Powerline:h16.5
 
+set linespace=3
 set showcmd                       " Display incomplete commands.
 set showmode                      " Display the mode you're in.
 
@@ -130,7 +135,7 @@ set statusline +=%2*%m%*                "modified flag
 
 " let g:Powerline_symbols = 'fancy'
 set encoding=utf-8
-set t_Co=256
+set t_Co=256 t_md=
 set fillchars+=stl:\ ,stlnc:\
 " set term=xterm-256color
 set termencoding=utf-8
@@ -144,13 +149,6 @@ set statusline+=%#warningmsg#
 " let g:syntastic_auto_loc_list = 1
 " let g:syntastic_check_on_open = 1
 " let g:syntastic_check_on_wq = 0
-
-" if has("gui_running")
-"    let s:uname = system("uname")
-"    if s:uname == "Darwin\n"
-"       set guifont=Inconsolata\ for\ Powerline:h16
-"    endif
-" endif
 
 if has("gui_running")
   " GUI is running or is about to start.

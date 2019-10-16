@@ -16,6 +16,7 @@ alias findpy='find . -path "./applications/*/migrations" -prune -o -name "*.py" 
 alias findjs='find . -name "*.js" | xargs grep'
 alias rmpyc='find . -name "*.pyc" -delete'
 alias ls='ls -G'
+alias nysitty='cd nysitty && workon nysitty'
 
 GREEN='\[\033[0;32m\]'
 MAGENTA='\[\033[0;35m\]'
@@ -39,6 +40,8 @@ export PATH=$PATH:$HOME/.npm-global/bin
 export FABRIC_VERSION=hlfv11
 
 eval "$(pipenv --completion)"
+
+alias vpn_rs01='sudo openconnect -u DIR\\erik.marty 184.106.125.134 --servercert sha256:85a6db05fce28a295dc79bda54825f5969b25f7794b8c8aea3339e8fb0a016ef --authgroup=RS01_VPN < ~/.vpngateway'
 
 export LDFLAGS="-L/usr/local/opt/openssl/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl/include"
