@@ -6,7 +6,6 @@ Bundle 'gmarik/vundle'
 
 " My Bundles here:
 "Bundle "vim-scripts/UltiSnips"
-"Bundle 'rey-wright/ultisnips-snippets.git'
 Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
@@ -23,14 +22,13 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 Bundle 'sjl/gundo.vim'
 Bundle 'dahu/LearnVim'
-Bundle 'Valloric/YouCompleteMe'
+"Bundle 'Valloric/YouCompleteMe'
 
 " colorschemes:
 Bundle 'tristen/superman'
 Bundle 'w0ng/vim-hybrid'
 Bundle 'noahfrederick/Hemisu'
 Bundle 'tomasr/molokai'
-Bundle 'rey-wright/argokai'
 
 " let g:ackprg = 'ag --nogroup --nocolor --column'
 "filetype plugin indent on   " required!
